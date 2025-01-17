@@ -1,0 +1,16 @@
+<h3  [ngStyle]="{textAlign: 'center', color: 'blue'}">
+    Sheridan College - Select a Campus to View Address
+</h3>
+<mat-form-field>
+    <mat-label>List</mat-label>
+    <mat-select [(value)]="selectCampus" (selectionChange)="onChange()">
+        <mat-option *ngFor="let c of campusData991701782" [value]="c.campus">{{ c.campus }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<hr>
+<div *ngIf="selectCampus">
+    <h3 [ngStyle]="{  color: 'blue'}">
+        {{ selectCampus }} Campus <br>{{ campusAdd.street }}{{ campusAdd.city }}
+    </h3>
+</div>

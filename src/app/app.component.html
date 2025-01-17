@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<app-header-duhans [MyData]="duhansPersonal" ></app-header-duhans>
+<mat-tab-group mat-stretch-tabs
+class="example-stretched-tabs mat-elevation-z4"
+[ngStyle]="{textAlign: 'center'}">
+ 
+<mat-tab >
+    <ng-template mat-tab-label>
+      <span class="material-icons">favorite</span>
+
+       My Book List - Sachin Duhan
+        </ng-template>
+        <app-books-duhans [myBooks991701782]="duhansBooks"></app-books-duhans>
+
+   </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="material-icons">favorite</span>
+        Campus Info - Sachin Duhan
+        
+        </ng-template>
+        <app-campus-duhans [campusData991701782]="duhansCampus"></app-campus-duhans>
+
+</mat-tab>
+</mat-tab-group>
+<app-footer-duhans [MyData]="duhansPersonal"></app-footer-duhans>
